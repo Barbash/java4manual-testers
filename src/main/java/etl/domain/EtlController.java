@@ -1,6 +1,8 @@
 package etl.domain;
 
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -14,20 +16,15 @@ public class EtlController {
     }
 
     public void doEtl() throws EtlException {
-        Connection connection = null;
-        try {
-            connection = null; //getConnection();
+        try (
+            Connection connection = null /* getConnection() */;
+            InputStream is = null;
+        ) {
             //.....
-        } catch (RuntimeException e) {
+        } catch (SQLException e) {
             throw new EtlException("Etl problem, don't panic!!!", e, 5);
-        } catch (Exception e) {
-
-        } finally {
-            if(connection != null) try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
