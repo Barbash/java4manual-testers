@@ -21,10 +21,8 @@ public class EtlController {
             InputStream is = null;
         ) {
             //.....
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new EtlException("Etl problem, don't panic!!!", e, 5);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
