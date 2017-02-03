@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 public class EtlControllerTest {
-    @Test(expected = EtlException.class, timeout = 1_000)
+//    @Test(expected = EtlException.class, timeout = 1_000)
     public void shouldDoEtlOperationWhenNoIoProblem() throws EtlException, CsvFormatException {
         //region Given | Fixture
         final Extractor extractorStub = mock(Extractor.class);
