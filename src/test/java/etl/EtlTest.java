@@ -3,14 +3,14 @@ package etl;
 import etl.domain.EtlController;
 import etl.domain.EtlException;
 import etl.domain.Loader;
-import etl.extractor.FileCsvExtractor;
+import etl.extractor.IoProblemExtractor;
 
 public class EtlTest {
     public static void main(String[] args) throws TestFailException {
         try {
 
             new EtlController(
-                new FileCsvExtractor(),
+                new IoProblemExtractor(),
                 new Loader[] {}
             ).doEtl();
 
