@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import static java.lang.System.*;
+
 public class EtlController {
     private Extractor extractor;
     private Loader[] loaders;

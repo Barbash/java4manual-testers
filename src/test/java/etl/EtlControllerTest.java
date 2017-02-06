@@ -43,6 +43,7 @@ public class EtlControllerTest {
     }
 
     public void fixtureBuilderDemo() {
+        /*
         ExtractorStubBuilder
             .withDataSource(
                 DataSourceStubBuilder
@@ -55,5 +56,6 @@ public class EtlControllerTest {
                 .build())
             .withStringFormat("....")
             .build();
+        */
     }
 }
